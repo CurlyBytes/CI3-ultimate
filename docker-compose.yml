@@ -1,0 +1,40 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+  redis:
+    image: redis:alpine
+    container_name: ci3-ultimate-redis
+
+  mysql:
+    image: mysql:8.0
+    container_name: ci3-ultimate-mysql
+    working_dir: /application
+    volumes:
+      - .:/application
+    environment:
+      - MYSQL_ROOT_PASSWORD=roopassword
+      - MYSQL_DATABASE=dbname
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpassword
+    ports:
+      - "7274:3306"
+
+  webserver:
+    image: nginx:alpine
+    container_name: ci3-ultimate-webserver
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "7272:80"
+
+  php-fpm:
+    build: phpdocker/php-fpm
+    container_name: ci3-ultimate-php-fpm
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
