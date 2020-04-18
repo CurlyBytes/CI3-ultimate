@@ -43,6 +43,9 @@
       "phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php --prepend ../../bin/xdebug-filter.php -vvv --testdox --colors=always",
       "phpunit --prepend ../../bin/xdebug-filter.php -vvv --testdox --colors=always"
     ],
+    "check-unittest": [
+      "phpunit"
+    ],
     "fix-cache": [
       "@composer dump-autoload --optimize --classmap-authoritative",
       "rm -rf vendor composer.lock",

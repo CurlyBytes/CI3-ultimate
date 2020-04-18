@@ -77,7 +77,14 @@ services:
       - PMA_HOST=mariadb
     depends_on:
       - mariadb
+<<<<<<< HEAD
       
 volumes:
   redis-data:
   mariadb-data:
+=======
+
+volumes:
+  redis-data:
+  mariadb-data:
+>>>>>>> origin/master
