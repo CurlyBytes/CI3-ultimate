@@ -2,7 +2,7 @@ https://www.sitepoint.com/multi-language-support-in-codeigniter/
 https://www.beingidea.com/multi-language-switcher-in-codeigniter/
 https://www.formget.com/codeigniter-language/
 https://arjunphp.com/multilingual-codeigniter-i18n/
-https://stackoverflow.com/questions/43088433/multi-language-using-codeigniter   
+https://stackoverflow.com/questions/43088433/multi-language-using-codeigniter
 
 https://selvakumar25.wordpress.com/2016/06/13/multi-language-support-in-codeigniter/
 https://www.cloudways.com/blog/multi-language-codeigniter/
@@ -15,7 +15,7 @@ https://codeigniter.com/userguide3/libraries/language.html
 https://codeigniter.com/userguide3/general/index.html
 https://codeigniter.com/userguide3/general/errors.html
 https://codeigniter.com/userguide3/general/ancillary_classes.html
-https://codeigniter.com/userguide3/general/creating_libraries.html  
+https://codeigniter.com/userguide3/general/creating_libraries.html
 https://github.com/bcit-ci/CodeIgniter/wiki/i18n-Multi-language-Library-Helper
 https://jeromejaglale.com/doc/php/codeigniter_i18n
 https://jeromejaglale.com/doc/php/codeigniter_template
