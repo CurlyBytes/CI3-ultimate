@@ -3,8 +3,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Welcome extends CT_Controller
 {
-
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
     }
     /**
@@ -26,6 +26,6 @@ class Welcome extends CT_Controller
     {
         $data['first']= '';
         $data['second']= '';
-        $this->load->view('welcome_message',$data);
+        $this->load->view('welcome_message', $data);
     }
 }
