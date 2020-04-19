@@ -71,9 +71,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<p><?php echo $this->lang->line('first_paragrapah');?></p>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
+		<p><?php echo $this->lang->line('second_paragrapah');?></p>
 		<code>application/views/welcome_message.php</code>
 
 		<p>The corresponding controller for this page is found at:</p>
