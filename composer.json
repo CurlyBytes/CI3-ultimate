@@ -78,7 +78,7 @@
     "cweagans/composer-patches": "1.6.7",
     "dompdf/dompdf": "dev-master@dev",
     "hirak/prestissimo": "0.3.10",
-    "phpunit/phpunit": "7.5.20",
+    "phpunit/phpunit": "9.1.1",
     "squizlabs/php_codesniffer": "3.5.5"
   },
   "require-dev": {
