@@ -59,7 +59,7 @@ services:
       - .:/app
 
   mariadb:
-    image: mariadb:10.4
+    image: mariadb:10.5
     restart: always
     #command: "mysqld --init-file /data/app/init.sql"
     volumes:
