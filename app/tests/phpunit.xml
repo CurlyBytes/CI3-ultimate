@@ -31,7 +31,6 @@
 		</whitelist>
 	</filter>
 	<logging>
-
 		<log type="coverage-html" target="../../bin/build/coverage"/>
 		<log type="coverage-crap4j" target="../../bin/build/lophpgs/crap4j.xml"/>
 		<log type="coverage-text" target="../../bin/build/logs/text.txt"/>
