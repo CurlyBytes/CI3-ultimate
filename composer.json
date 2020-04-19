@@ -40,11 +40,12 @@
       "@composer update --dry-run --profile -vvv"
     ],
     "check-test": [
-      "phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php --prepend ../../bin/xdebug-filter.php -vvv --testdox --colors=always",
-      "phpunit --prepend ../../bin/xdebug-filter.php -vvv --testdox --colors=always"
+      "phpunit --dump-xdebug-filter bin/xdebug-filter.php --prepend bin/xdebug-filter.php -vvv --testdox --colors=always",
+      "phpunit --prepend bin/xdebug-filter.php -vvv --testdox --colors=always"
     ],
     "check-unittest": [
-      "phpunit"
+      "phpunit --dump-xdebug-filter=/tmp/phpunit-xdebug-filter.php",
+      "phpunit --prepend=/tmp/phpunit-xdebug-filter.php --coverage-html=tests/html-coverage"
     ],
     "fix-cache": [
       "@composer dump-autoload --optimize --classmap-authoritative",
