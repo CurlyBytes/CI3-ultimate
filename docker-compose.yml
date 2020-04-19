@@ -5,7 +5,6 @@
 version: "3.7"
 
 services:
-  
   redis:
     image: redis:alpine
     container_name: ci3-ultimate-redis
