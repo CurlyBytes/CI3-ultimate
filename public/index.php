@@ -1,4 +1,5 @@
 <?php
+#http://oldblog.codebyjeff.com/blog/2013/10/setting-environment-vars-for-codeigniter-commandline
 /**
  * CodeIgniter
  *
@@ -68,8 +69,8 @@
  * @url			https://stackoverflow.com/questions/7008830/why-defined-define-syntax-in-defining-a-constant
  * @url			http://codebyjeff.com/blog/2013/10/setting-environment-vars-for-codeigniter-commandline
  * @url			https://garrettstjohn.com/articles/loading-environment-specific-configuration-files-codeigniter/
- * @example		define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? 
- *				$_SERVER['CI_ENV'] : 'development');
+ * @example		define('ENVIRONMENT', isset($_SERVER['CT_ENV']) ? 
+ *				$_SERVER['CT_ENV'] : 'development');
  * 					
  ***************************************************************************/	
     //Add global 'ROOT' and get current directory path with going up 1 level by '..'
@@ -90,14 +91,14 @@
 	 *
 	 ***************************************************************************/
     //Define and point the data variables based on environment option defaulted in CI3
-    $development = 'development';
-    $testing = 'testing';
-    $production = 'production';
+    //const development = 'development';
+    //testing = 'testing';
+    //$production = 'production';
           
     // detects if it is a command line request
     if ((php_sapi_name() == 'cli') or defined('STDIN'))
     {
-        $environment = $development;
+        $environment = 'development';
         if (isset($argv)) 
         {
             // grab the --env argument, and the one that comes next
@@ -111,7 +112,7 @@
         }  
         define('ENVIRONMENT', $environment);
     }       
-    if (!defined('ENVIRONMENT')) define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : $development);
+    defined('ENVIRONMENT') OR define('ENVIRONMENT', isset($_SERVER['CT_ENV']) ? $_SERVER['CT_ENV'] : 'development');
  
 /*
  *---------------------------------------------------------------
@@ -122,14 +123,14 @@
  * By default development will show errors but testing and live will hide them.
  */
 switch (ENVIRONMENT) {
-    case $development:
+    case 'development':
         error_reporting(-1);
         ini_set('display_errors', 1);
         ini_set('display_startup_errors',1);
     break;
 
-    case $testing:
-    case $production:
+    case 'testing':
+    case 'production':
         ini_set('display_errors', 0);
         if (version_compare(PHP_VERSION, '5.3', '>=')) {
             error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
