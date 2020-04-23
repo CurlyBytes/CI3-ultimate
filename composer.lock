@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e51d1e984808cd6528c25a6d940d58b",
+    "content-hash": "1960ec6c5b02cec89ac213cdabbbc188",
     "packages": [
         {
             "name": "codeigniter/framework",
@@ -364,6 +364,37 @@
                 "object graph"
             ],
             "time": "2020-01-17T21:11:47+00:00"
+        },
+        {
+            "name": "nltbinh/codeigniter-service-layer",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nltbinh/codeigniter-service-layer.git",
+                "reference": "e59baf918cefb33f8fdc8f886cdcfb78fc606b84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nltbinh/codeigniter-service-layer/zipball/e59baf918cefb33f8fdc8f886cdcfb78fc606b84",
+                "reference": "e59baf918cefb33f8fdc8f886cdcfb78fc606b84",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nguyen Luu Thanh binh",
+                    "email": "nguyenluuthanhbinh@outlook.com"
+                }
+            ],
+            "description": "A simple service layer for CodeIgniter",
+            "time": "2017-03-16T04:18:11+00:00"
         },
         {
             "name": "phar-io/manifest",
