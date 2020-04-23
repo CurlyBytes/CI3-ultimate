@@ -1,5 +1,4 @@
 <?php
-#http://oldblog.codebyjeff.com/blog/2013/10/setting-environment-vars-for-codeigniter-commandline
 /**
  * CodeIgniter
  *
@@ -54,66 +53,11 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
+// This `if` statemant is needed for @runInSeparateProcess
+if (! defined('ENVIRONMENT')) {
+    define('ENVIRONMENT', 'testing');
+}
 
-/***************************************************************************
- * 
- * Custom environment load and dynamic lookup of the root file
- * 
- * @package	    environment_pack
- * @category	instantation 
- * @author  	Francisco Abayon <franz.noyaba@gmail.com>
- * @copyright	August 25, 2018
- * @since  		0.3.0
- * @link		../environments.php
- * @url			https://stackoverflow.com/questions/9149483/get-folder-up-one-level/9149495
- * @url			https://stackoverflow.com/questions/7008830/why-defined-define-syntax-in-defining-a-constant
- * @url			http://codebyjeff.com/blog/2013/10/setting-environment-vars-for-codeigniter-commandline
- * @url			https://garrettstjohn.com/articles/loading-environment-specific-configuration-files-codeigniter/
- * @example		define('ENVIRONMENT', isset($_SERVER['CT_ENV']) ? 
- *				$_SERVER['CT_ENV'] : 'development');
- * 					
- ***************************************************************************/	
-    //Add global 'ROOT' and get current directory path with going up 1 level by '..'
-    defined('ROOT') OR define('ROOT',realpath(__DIR__ . DIRECTORY_SEPARATOR . '..'));
-
-
-	/***************************************************************************
-	 *
-	 * Having conditional statement for not being access via cli is set to by boolean and check
-	 * if being access via cli it well automatically change the environment on it and Our goal is to send:
-	 * 		- php index.php cron daily_tasks important_job 831 --environment production
-	 *		- and have it run http://xyz.com/cron/daily_tasks/important_job/831
-	 *		using the production environment
-	 *
-	 *
-	 * @todo		Create a case expression for determining the CLI or web in HTTP_HOST
-	 * @var			Boolean						environment act ast the trigger point
-	 *
-	 ***************************************************************************/
-    //Define and point the data variables based on environment option defaulted in CI3
-    //const development = 'development';
-    //testing = 'testing';
-    //$production = 'production';
-          
-    // detects if it is a command line request
-    if ((php_sapi_name() == 'cli') or defined('STDIN'))
-    {
-        $environment = 'development';
-        if (isset($argv)) 
-        {
-            // grab the --env argument, and the one that comes next
-
-            $key = (array_search('--env', $argv));
-            $environment = $argv[$key +1];
-
-            // get rid of them so they don't get passed in to our method as parameter values
-
-            unset($argv[$key], $argv[$key +1]);
-        }  
-        define('ENVIRONMENT', $environment);
-    }       
-    defined('ENVIRONMENT') OR define('ENVIRONMENT', isset($_SERVER['CT_ENV']) ? $_SERVER['CT_ENV'] : 'development');
- 
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -123,13 +67,12 @@
  * By default development will show errors but testing and live will hide them.
  */
 switch (ENVIRONMENT) {
+    case 'testing':
     case 'development':
         error_reporting(-1);
         ini_set('display_errors', 1);
-        ini_set('display_startup_errors',1);
     break;
 
-    case 'testing':
     case 'production':
         ini_set('display_errors', 0);
         if (version_compare(PHP_VERSION, '5.3', '>=')) {
@@ -140,7 +83,7 @@ switch (ENVIRONMENT) {
     break;
 
     default:
-        header($_SERVER["SERVER_PROTOCOL"]. ' 503 Service Unavailable.', true, 503);
+        header('HTTP/1.1 503 Service Unavailable.', true, 503);
         echo 'The application environment is not set correctly.';
         exit(1); // EXIT_ERROR
 }
@@ -153,10 +96,8 @@ switch (ENVIRONMENT) {
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-    $system_path = ROOT . DIRECTORY_SEPARATOR . 'vendor'
-                        . DIRECTORY_SEPARATOR . 'codeigniter'
-                        . DIRECTORY_SEPARATOR . 'framework'
-                        . DIRECTORY_SEPARATOR . 'system';
+    $system_path = '../../vendor/codeigniter/framework/system';
+
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
@@ -172,7 +113,7 @@ switch (ENVIRONMENT) {
  *
  * NO TRAILING SLASH!
  */
-    $application_folder = ROOT . DIRECTORY_SEPARATOR . 'application';
+    $application_folder = '../../app';
 
 /*
  *---------------------------------------------------------------
@@ -249,9 +190,11 @@ switch (ENVIRONMENT) {
  */
 
     // Set the current directory correctly for CLI requests
-    if (defined('STDIN')) {
+//	if (defined('STDIN'))
+//	{
+        // This is needed for @runInSeparateProcess
         chdir(dirname(__FILE__));
-    }
+//	}
 
     if (($_temp = realpath($system_path)) !== false) {
         $system_path = $_temp.DIRECTORY_SEPARATOR;
@@ -266,7 +209,7 @@ switch (ENVIRONMENT) {
 
     // Is the system path correct?
     if (! is_dir($system_path)) {
-        header($_SERVER["SERVER_PROTOCOL"]. ' 503 Service Unavailable.', true, 503);
+        header('HTTP/1.1 503 Service Unavailable.', true, 503);
         echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
         exit(3); // EXIT_CONFIG
     }
@@ -279,11 +222,14 @@ switch (ENVIRONMENT) {
     // The name of THIS file
     define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
+    // Path to the test directory containing all the test files.
+    define('TESTPATH', __DIR__.DIRECTORY_SEPARATOR);  // Should be the folder this `Bootstrap.php` file is in.
+
     // Path to the system directory
     define('BASEPATH', $system_path);
 
     // Path to the front controller (this file) directory
-    define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+    define('FCPATH', realpath(dirname(__FILE__).'/../../public').DIRECTORY_SEPARATOR);
 
     // Name of the "system" directory
     define('SYSDIR', basename(BASEPATH));
@@ -306,7 +252,7 @@ switch (ENVIRONMENT) {
             DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
         );
     } else {
-        header($_SERVER["SERVER_PROTOCOL"]. ' 503 Service Unavailable.', true, 503);
+        header('HTTP/1.1 503 Service Unavailable.', true, 503);
         echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
         exit(3); // EXIT_CONFIG
     }
@@ -333,18 +279,84 @@ switch (ENVIRONMENT) {
             DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
         );
     } else {
-        header($_SERVER["SERVER_PROTOCOL"]. ' 503 Service Unavailable.', true, 503);
+        header('HTTP/1.1 503 Service Unavailable.', true, 503);
         echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
         exit(3); // EXIT_CONFIG
     }
 
     define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
 
+    // Path to the ci-phpunit-test directory
+    if (is_file(TESTPATH . '_ci_phpunit_test' . DIRECTORY_SEPARATOR . 'CIPHPUnitTest.php')) {
+        define('CI_PHPUNIT_TESTPATH', TESTPATH . '_ci_phpunit_test' . DIRECTORY_SEPARATOR);
+    } else {
+        // Assume Composer with a vendor directory parallel to the application directory
+        define('CI_PHPUNIT_TESTPATH', implode(
+            DIRECTORY_SEPARATOR,
+            [dirname(APPPATH), 'vendor', 'kenjis', 'ci-phpunit-test', 'application', 'tests', '_ci_phpunit_test']
+        ).DIRECTORY_SEPARATOR);
+    }
+
 /*
- * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
- * --------------------------------------------------------------------
+ * -------------------------------------------------------------------
+ *  Enabling Monkey Patching
+ * -------------------------------------------------------------------
  *
- * And away we go...
+ * If you want to use monkey patching, uncomment below code and configure
+ * for your application.
  */
-require_once BASEPATH.'core/CodeIgniter.php';
+/*
+require CI_PHPUNIT_TESTPATH . 'patcher/bootstrap.php';
+MonkeyPatchManager::init([
+    // If you want debug log, set `debug` true, and optionally you can set the log file path
+    'debug' => true,
+    'log_file' => '/tmp/monkey-patch-debug.log',
+    // PHP Parser: PREFER_PHP7, PREFER_PHP5, ONLY_PHP7, ONLY_PHP5
+    'php_parser' => 'PREFER_PHP5',
+    'cache_dir' => CI_PHPUNIT_TESTPATH . 'tmp/cache',
+    // Directories to patch source files
+    'include_paths' => [
+        APPPATH,
+        BASEPATH,
+        CI_PHPUNIT_TESTPATH . 'replacing/',
+    ],
+    // Excluding directories to patch
+    // If you want to patch files inside paths below, you must add the directory starting with '-'
+    'exclude_paths' => [
+        TESTPATH,
+        '-' . CI_PHPUNIT_TESTPATH . 'replacing/',
+    ],
+    // All patchers you use.
+    'patcher_list' => [
+        'ExitPatcher',
+        'FunctionPatcher',
+        'MethodPatcher',
+        'ConstantPatcher',
+    ],
+    // Additional functions to patch
+    'functions_to_patch' => [
+        //'random_string',
+    ],
+    'exit_exception_classname' => 'CIPHPUnitTestExitException',
+]);
+*/
+
+/*
+ * -------------------------------------------------------------------
+ *  Added for ci-phpunit-test
+ * -------------------------------------------------------------------
+ */
+
+require CI_PHPUNIT_TESTPATH . '/CIPHPUnitTest.php';
+
+CIPHPUnitTest::init();
+// Or you can set directories for autoloading
+/*
+CIPHPUnitTest::init([
+    // Directories for autoloading
+    APPPATH.'models',
+    APPPATH.'libraries',
+    APPPATH.'controllers',
+    APPPATH.'modules',
+]);
+*/

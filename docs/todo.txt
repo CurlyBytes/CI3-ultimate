@@ -26,3 +26,25 @@ https://github.com/terrylinooo/codeigniter-minifier/tree/master/application
 https://github.com/terrylinooo/codeigniter-minifier/issues
 https://github.com/slav123/CodeIgniter-minify/issues
 https://github.com/slav123/CodeIgniter-minify/issues/56
+
+
+
+start
+check controller
+https://github.com/kenjis/codeigniter3-filename-checker
+https://github.com/sjlu/CodeIgniter-Bootstrap
+
+
+to be continue
+https://github.com/kenjis/codeigniter-cli
+https://github.com/maltyxx/debugbar
+https://github.com/kenjis/codeigniter-debugbar
+https://github.com/Tan5en5/codeigniter-debugbar
+https://github.com/kenjis/codeigniter-widgets
+https://github.com/kenjis/codeigniter3-namespaced-controller
+https://github.com/sjlu/CodeIgniter-Bootstrap/wiki
+https://github.com/nobuti/Codeigniter-breadcrumbs
+https://github.com/xdn27/codeigniter-alert
+https://github.com/JCSama/CodeIgniter-develbar
+https://rougin.github.io/combustor/
+https://github.com/jenssegers/codeigniter-template-library
