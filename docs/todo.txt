@@ -37,9 +37,6 @@ https://github.com/sjlu/CodeIgniter-Bootstrap
 
 to be continue
 https://github.com/kenjis/codeigniter-cli
-https://github.com/maltyxx/debugbar
-https://github.com/kenjis/codeigniter-debugbar
-https://github.com/Tan5en5/codeigniter-debugbar
 https://github.com/kenjis/codeigniter-widgets
 https://github.com/kenjis/codeigniter3-namespaced-controller
 https://github.com/sjlu/CodeIgniter-Bootstrap/wiki
@@ -48,3 +45,43 @@ https://github.com/xdn27/codeigniter-alert
 https://github.com/JCSama/CodeIgniter-develbar
 https://rougin.github.io/combustor/
 https://github.com/jenssegers/codeigniter-template-library
+
+
+To be hmvc
+https://github.com/salimmansoori1994/full_ci_set
+https://forum.codeigniter.com/thread-63078-page-2.html
+
+To be refactor via composer custom
+https://github.com/maltyxx/debugbar
+https://github.com/kenjis/codeigniter-debugbar
+https://github.com/Tan5en5/codeigniter-debugbar
+https://github.com/JCSama/CodeIgniter-develbar
+
+ddd setup
+https://en.programqa.com/question/40452245/
+https://code.tutsplus.com/articles/domain-driven-design--net-25773
+https://laracasts.com/discuss/channels/general-discussion/migrating-existing-codeigniter-application-to-laravel?page=0
+
+seo in codeigniter
+if ($this->agent->is_robot()) 
+{   echo '<link rel="canonical" href="' . site_url( $this->uri->uri_string() ) .'" />'; } else 
+{   echo '<meta name="canonical" content="'. base_url().implode('/', $this->uri->rsegment_array()) . '" />'; }
+
+echo '<link rel="canonical" href="' . site_url( $this->uri->uri_string() ) . '" />';
+
+<script type="text/javascript"> 
+try { 
+    var pageTracker = _gat._getTracker("UA-XXXXXXX-YY"); 
+    pageTracker._trackPageview("<?=base_url().implode('/', $this->uri->rsegment_array();?>"));
+} 
+catch(err){
+
+} 
+</script>
+====================
+
+push notificatin
+https://phil.tech/codeigniter/2009/11/21/send-iphone-notifications-from-codeigniter/
+
+
+html base tag <base href="<?=base_url();?>">

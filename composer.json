@@ -1,9 +1,9 @@
 {
-  "name": "cocoytech/codeigniter-3-optimize",
+  "name": "cocoytech/ci3-ultimate",
   "description": "All best practices and setup for codeigniter 3 all thru the tutorials and webs",
   "type": "project",
   "license": "MIT",
-  "homepage": "https://codeigniter3.cocoytech.com",
+  "homepage": "https://cocoytech.com",
   "readme": "README.md",
   "time": "2019-12-01",
   "authors": [
@@ -83,7 +83,6 @@
     "dompdf/dompdf": "dev-master@dev",
     "filp/whoops": "2.7.1",
     "hirak/prestissimo": "0.3.10",
-    "maltyxx/debugbar": "^1.0",
     "nltbinh/codeigniter-service-layer": "^1.0",
     "phpunit/phpunit": "7.5.20",
     "squizlabs/php_codesniffer": "3.5.5",

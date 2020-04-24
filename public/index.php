@@ -172,7 +172,7 @@ switch (ENVIRONMENT) {
  *
  * NO TRAILING SLASH!
  */
-    $application_folder = ROOT . DIRECTORY_SEPARATOR . 'application';
+    $application_folder = ROOT . DIRECTORY_SEPARATOR . 'app';
 
 /*
  *---------------------------------------------------------------
