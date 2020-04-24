@@ -3,7 +3,10 @@ https://www.beingidea.com/multi-language-switcher-in-codeigniter/
 https://www.formget.com/codeigniter-language/
 https://arjunphp.com/multilingual-codeigniter-i18n/
 https://stackoverflow.com/questions/43088433/multi-language-using-codeigniter
-
+https://www.roytuts.com/using-template-in-codeigniter/
+https://www.roytuts.com/display-site-maintenence-message-using-codeigniter/
+https://www.roytuts.com/prevent-sql-injection-in-codeigniter/
+https://www.roytuts.com/server-sent-events-with-codeigniter-push-notifications/
 https://selvakumar25.wordpress.com/2016/06/13/multi-language-support-in-codeigniter/
 https://www.cloudways.com/blog/multi-language-codeigniter/
 http://learningprogramming.net/php-mysql/codeigniter/multi-language-in-codeigniter-framework/
@@ -33,6 +36,7 @@ start
 check controller
 https://github.com/kenjis/codeigniter3-filename-checker
 https://github.com/sjlu/CodeIgniter-Bootstrap
+https://www.roytuts.com/server-sent-events-with-codeigniter-push-notifications/
 
 
 to be continue
@@ -50,12 +54,25 @@ https://github.com/jenssegers/codeigniter-template-library
 To be hmvc
 https://github.com/salimmansoori1994/full_ci_set
 https://forum.codeigniter.com/thread-63078-page-2.html
+https://github.com/binhnlt/codeigniter-service-layer
+https://github.com/alzen8work/CodeIgniter-HMVC/tree/master/application
+https://github.com/N3Cr0N/CodeIgniter-HMVC
+https://www.roytuts.com/setup-hmvc-with-codeigniter-3/
+
 
 To be refactor via composer custom
 https://github.com/maltyxx/debugbar
 https://github.com/kenjis/codeigniter-debugbar
 https://github.com/Tan5en5/codeigniter-debugbar
 https://github.com/JCSama/CodeIgniter-develbar
+
+CI security
+https://markladoux.wordpress.com/2018/05/14/simple-trick-to-prevent-access-via-direct-call-to-index-php/
+https://markladoux.wordpress.com/2012/07/18/makismet-3-0/
+
+CI base classes
+http://www.highermedia.com/articles/nuts_bolts/codeigniter_base_classes_revisited
+https://markladoux.wordpress.com/2012/12/19/codeigniter-autoload-hook-by-shane-pearson-modified/
 
 ddd setup
 https://en.programqa.com/question/40452245/
