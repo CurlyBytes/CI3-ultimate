@@ -39,8 +39,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
-$autoload['packages'] = array(APPPATH.'third_party/codeigniter-debugbar',APPPATH . 'third_party/DevelBar');
-
+$autoload['packages'] = array();
+//APPPATH.'third_party/codeigniter-debugbar',APPPATH . 'third_party/DevelBar'
 /*
 | -------------------------------------------------------------------
 |  Auto-load Libraries
@@ -58,7 +58,8 @@ $autoload['packages'] = array(APPPATH.'third_party/codeigniter-debugbar',APPPATH
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('console');
+$autoload['libraries'] = array();
+//console
 
 /*
 | -------------------------------------------------------------------

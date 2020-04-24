@@ -27,8 +27,8 @@ https://github.com/terrylinooo/codeigniter-minifier/issues
 https://github.com/slav123/CodeIgniter-minify/issues
 https://github.com/slav123/CodeIgniter-minify/issues/56
 
-
-
+http://www.highermedia.com/articles/nuts_bolts/codeigniter_base_classes_revisited
+https://markladoux.wordpress.com/2012/07/07/new-and-improved-codeigniter-setting-class/
 start
 check controller
 https://github.com/kenjis/codeigniter3-filename-checker
@@ -84,4 +84,19 @@ push notificatin
 https://phil.tech/codeigniter/2009/11/21/send-iphone-notifications-from-codeigniter/
 
 
-html base tag <base href="<?=base_url();?>">
+html base tag <base href="<?=base_url();?>"> or <base href="http://example.com/en/" /> https://webdesign.tutsplus.com/articles/quick-tip-set-relative-urls-with-the-base-tag--cms-21399
+
+extend multiple core files like MY_Controller extend CI_Controller and PUBlic_controller extend MY_Controller https://phil.tech/codeigniter/2010/02/08/codeigniter-base-classes-keeping-it-dry/
+
+
+-----------
+html helper functions in ci
+Store your DOCTYPE in a config variable and update your entire site from XHTML 1.1 to HTML 5 easily
+Developing your app with <h1>Something</h1> then realizing your headers in 500 different view files need <h1><span>Something</span></h1>
+Fetching metadata from a database and outputting with meta()
+Adding Google event tracking to images loaded with img()
+Set your page titles (display headers, not title tag) to use a config variable 1 to 6 in case your CMS needs to change what level the links are.
+XSS protection for forms using form_open() and form_close(). Derek Allard hinted at this some time ago and I still hope to see it happen.
+
+----
+git submodules
