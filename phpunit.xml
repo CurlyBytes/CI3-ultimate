@@ -1,7 +1,7 @@
 <phpunit
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="phpunit.xsd"
-	bootstrap="./Bootstrap.php"
+	bootstrap="./app/tests/Bootstrap.php"
 	backupGlobals="true"
 	cacheTokens ="true"
 	convertDeprecationsToExceptions="true"
@@ -31,14 +31,13 @@
 		</whitelist>
 	</filter>
 	<logging>
-
-		<log type="coverage-html" target="../../bin/build/coverage"/>
-		<log type="coverage-crap4j" target="../../bin/build/lophpgs/crap4j.xml"/>
-		<log type="coverage-text" target="../../bin/build/logs/text.txt"/>
-		<log type="coverage-php" target="../../bin/build/logs/test.php"/>
-		<log type="coverage-clover" target="../../bin/build/logs/clover.xml"/>
-		<log type="junit" target="../../bin/build/logs/junit.xml"/>
-		<log type="testdox-html" target="../../bin/build/coverage/testdox.html"/>
-  		<log type="testdox-text" target="../../bin/build/logs/testdox.txt"/>
+		<log type="coverage-html" target="bin/build/coverage"/>
+		<log type="coverage-crap4j" target="bin/build/lophpgs/crap4j.xml"/>
+		<log type="coverage-text" target="bin/build/logs/text.txt"/>
+		<log type="coverage-php" target="bin/build/logs/test.php"/>
+		<log type="coverage-clover" target="bin/build/logs/clover.xml"/>
+		<log type="junit" target="bin/build/logs/junit.xml"/>
+		<log type="testdox-html" target="bin/build/coverage/testdox.html"/>
+  		<log type="testdox-text" target="bin/build/logs/testdox.txt"/>
 	</logging>
 </phpunit>

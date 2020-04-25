@@ -145,6 +145,7 @@ https://azure.microsoft.com/en-us/services/ddos-protection/
 https://azure.microsoft.com/en-us/services/key-vault/
 https://azure.microsoft.com/en-us/services/search/#pricing
 https://azure.microsoft.com/en-us/services/cache/
+azure block chain
 https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
 https://github.com/muhammadhafeez/selenium-and-unit-testing-in-Codeigniter-PHPunit
 
@@ -155,8 +156,11 @@ https://code.tutsplus.com/tutorials/6-codeigniter-hacks-for-the-masters--net-830
 
 https://github.com/timwentzell/ApplicationInsights-PHP
 https://github.com/acollard/ApplicationInsights-PHP
+
 https://github.com/JoshHighland/codeigniter-monolog-plus
 https://github.com/jkachel/codeigniter-monolog-plus
+
+
 https://packagist.org/packages/yidas/codeigniter-psr4-autoload
 https://github.com/phpredis/phpredis#php-session-handler
 https://github.com/hoxe-laudert/active-directory

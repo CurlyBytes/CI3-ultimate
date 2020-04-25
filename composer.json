@@ -28,7 +28,7 @@
       "@composer validate --no-check-all --ansi"
     ],
     "check-phpcs": [
-      "vendor\\bin\\phpcs --report-full --standard=PSR2 application/"
+      "./vendor/bin/phpcs --report-full --standard=PSR2 app/"
     ],
     "check-profile": [
       "@composer show -i",
@@ -40,12 +40,11 @@
       "@composer update --dry-run --profile -vvv"
     ],
     "check-test": [
-      "phpunit --dump-xdebug-filter bin/xdebug-filter.php --prepend bin/xdebug-filter.php -vvv --testdox --colors=always",
-      "phpunit --prepend bin/xdebug-filter.php -vvv --testdox --colors=always"
+      "phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php --prepend ../../bin/xdebug-filter.php -vvv --testdox --colors=always",
+      "phpunit --prepend ../../bin/xdebug-filter.php -vvv --testdox --colors=always"
     ],
     "check-unittest": [
-      "phpunit --dump-xdebug-filter=/tmp/phpunit-xdebug-filter.php",
-      "phpunit --prepend=/tmp/phpunit-xdebug-filter.php --coverage-html=tests/html-coverage"
+      "./vendor/bin/phpunit"
     ],
     "fix-cache": [
       "@composer dump-autoload --optimize --classmap-authoritative",
@@ -80,13 +79,12 @@
   "require": {
     "codeigniter/framework": "3.1.11",
     "cweagans/composer-patches": "1.6.7",
-    "dompdf/dompdf": "dev-master@dev",
     "filp/whoops": "2.7.1",
     "hirak/prestissimo": "0.3.10",
+    "microsoft/application-insights": "dev-master",
     "nltbinh/codeigniter-service-layer": "^1.0",
     "phpunit/phpunit": "7.5.20",
     "squizlabs/php_codesniffer": "3.5.5",
-    "tan5en5/codeigniter-debugbar": "dev-master",
     "vlucas/phpdotenv": "^4.1"
   },
   "require-dev": {
@@ -95,7 +93,8 @@
     "kenjis/ci-phpunit-test": "0.17.3",
     "nerones/codeigniter-phpcs": "dev-master",
     "phpmd/phpmd": "2.8.2",
-    "roave/security-advisories": "dev-master"
+    "roave/security-advisories": "dev-master",
+    "spatie/phpunit-watcher": "^1.22"
   },
   "autoload": {
     "exclude-from-classmap": [

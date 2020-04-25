@@ -66,6 +66,17 @@ https://github.com/kenjis/codeigniter-debugbar
 https://github.com/Tan5en5/codeigniter-debugbar
 https://github.com/JCSama/CodeIgniter-develbar
 
+CI aapp insightsa
+https://github.com/microsoft/ApplicationInsights-PHP
+https://packagist.org/packages/app-insights-php/client
+https://github.com/Seldaek/monolog/blob/master/doc/02-handlers-formatters-processors.md
+https://github.com/app-insights-php/monolog-handler
+https://github.com/JoshHighland/codeigniter-monolog-plus
+https://github.com/Seldaek/monolog/wiki/Third-Party-Packages
+https://github.com/jkachel/codeigniter-monolog-plus
+https://github.com/Seldaek/monolog/blob/master/src/Monolog/Handler/ChromePHPHandler.php
+https://github.com/cmdisp/monolog-microsoft-teams
+
 CI security
 https://markladoux.wordpress.com/2018/05/14/simple-trick-to-prevent-access-via-direct-call-to-index-php/
 https://markladoux.wordpress.com/2012/07/18/makismet-3-0/
@@ -78,7 +89,7 @@ ddd setup
 https://en.programqa.com/question/40452245/
 https://code.tutsplus.com/articles/domain-driven-design--net-25773
 https://laracasts.com/discuss/channels/general-discussion/migrating-existing-codeigniter-application-to-laravel?page=0
-
+swtich case with if else 1) deve is chrome and php fiel 2) prod  is azure insights and teams
 seo in codeigniter
 if ($this->agent->is_robot()) 
 {   echo '<link rel="canonical" href="' . site_url( $this->uri->uri_string() ) .'" />'; } else 
@@ -117,3 +128,9 @@ XSS protection for forms using form_open() and form_close(). Derek Allard hinted
 
 ----
 git submodules
+
+
+
+
+--- kkpi for devops
+
