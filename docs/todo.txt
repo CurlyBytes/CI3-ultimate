@@ -77,9 +77,32 @@ https://github.com/jkachel/codeigniter-monolog-plus
 https://github.com/Seldaek/monolog/blob/master/src/Monolog/Handler/ChromePHPHandler.php
 https://github.com/cmdisp/monolog-microsoft-teams
 
+CI BDD 
+https://github.com/mistymagich/ci-phpunit-behat
+
+CI testing
+https://laravel-news.com/tips-to-speed-up-phpunit-tests
+https://medium.com/@nicocabot/speed-up-phpunit-code-coverage-analysis-4e35345b3dad
+https://timacdonald.me/tips-speed-up-your-phpunit-tests/
+https://mamchenkov.net/wordpress/2019/02/15/tips-to-speed-up-your-phpunit-tests/
+https://stackoverflow.com/questions/6167382/phpunit-testing-is-painfully-slow
+https://phpunit.de/getting-started/phpunit-7.html
+
+CI ddd
 CI security
 https://markladoux.wordpress.com/2018/05/14/simple-trick-to-prevent-access-via-direct-call-to-index-php/
 https://markladoux.wordpress.com/2012/07/18/makismet-3-0/
+
+CI watcher
+https://www.sitepoint.com/write-javascript-style-test-watchers-php/
+https://packagist.org/packages/jasonlewis/resource-watcher
+https://github.com/spatie/phpunit-watcher
+https://stackoverflow.com/questions/19226524/run-phpunit-tests-on-change
+https://packagist.org/packages/yosymfony/resource-watcher
+https://freek.dev/812-a-tool-to-automatically-rerun-phpunit-tests-when-source-code-changes
+https://github.com/mistymagich/ci-phpunit-behat
+https://github.com/seregazhuk/php-watcher
+https://packagist.org/packages/takielias/codeigniter-websocket
 
 CI base classes
 http://www.highermedia.com/articles/nuts_bolts/codeigniter_base_classes_revisited
@@ -89,6 +112,7 @@ ddd setup
 https://en.programqa.com/question/40452245/
 https://code.tutsplus.com/articles/domain-driven-design--net-25773
 https://laracasts.com/discuss/channels/general-discussion/migrating-existing-codeigniter-application-to-laravel?page=0
+https://medium.com/better-programming/state-strategy-design-patterns-by-example-f57ebd7b6211
 swtich case with if else 1) deve is chrome and php fiel 2) prod  is azure insights and teams
 seo in codeigniter
 if ($this->agent->is_robot()) 
