@@ -17,11 +17,10 @@ class Installer
     protected $tmp_dir;
     protected $packages = array();
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->tmp_dir = __DIR__ . '/tmp';
         @mkdir($this->tmp_dir);
-
+        
         $this->packages = array(
             'translations' => array(
                 'site'  => 'github',
@@ -104,11 +103,11 @@ class Installer
     public function usage($self)
     {
         $msg = 'You can install:' . PHP_EOL;
-
+        
         foreach ($this->packages as $key => $value) {
             $msg .= '  ' . $value['name'] . ' (' . $key . ')' . PHP_EOL;
         }
-
+        
         $msg .= PHP_EOL;
         $msg .= 'Usage:' . PHP_EOL;
         $msg .= '  php install.php <package> <version/branch>'  . PHP_EOL;
@@ -124,7 +123,8 @@ class Installer
 
     public function install($package, $version)
     {
-        if (! isset($this->packages[$package])) {
+        if (! isset($this->packages[$package]))
+        {
             return 'Error! no such package: ' . $package . PHP_EOL;
         }
 
@@ -138,7 +138,7 @@ class Installer
                 'Error! no such repos type: ' . $this->packages[$package]['site']
             );
         }
-
+        
         list($src, $dst) = $this->$method($package, $version);
 
         $this->recursiveCopy($src, $dst);
@@ -161,13 +161,13 @@ class Installer
 
         $dir = $this->packages[$package]['dir'];
         $pre = isset($this->packages[$package]['pre']) ? $this->packages[$package]['pre'] : '';
-
+        
         if (is_string($dir)) {
             $src = realpath(dirname($filepath) . "/$repos-$version/$pre$dir");
             $dst = realpath(__DIR__ . "/../application/$dir");
             return array($src, $dst);
         }
-
+        
         foreach ($dir as $directory) {
             $src[] = realpath(dirname($filepath) . "/$repos-$version/$pre$directory");
             @mkdir(__DIR__ . "/../application/$directory");
@@ -186,13 +186,13 @@ class Installer
         $dirname = $this->unzip($filepath);
 
         $dir = $this->packages[$package]['dir'];
-
+        
         if (is_string($dir)) {
             $src = realpath(dirname($filepath) . "/$dirname/$dir");
             $dst = realpath(__DIR__ . "/../application/$dir");
             return array($src, $dst);
         }
-
+        
         foreach ($dir as $directory) {
             $src[] = realpath(dirname($filepath) . "/$dirname/$directory");
             @mkdir(__DIR__ . "/../application/$directory");
@@ -208,18 +208,18 @@ class Installer
             throw new RuntimeException("Can't download: $url");
         }
         echo 'Downloaded: ' . $url . PHP_EOL;
-
+        
         $urls = parse_url($url);
         $filepath = $this->tmp_dir . '/' . basename($urls['path']);
         file_put_contents($filepath, $file);
-
+        
         return $filepath;
     }
 
     private function unzip($filepath)
     {
         $zip = new ZipArchive();
-        if ($zip->open($filepath) === true) {
+        if ($zip->open($filepath) === TRUE) {
             $tmp = explode('/', $zip->getNameIndex(0));
             $dirname = $tmp[0];
             $zip->extractTo($this->tmp_dir . '/');
@@ -227,7 +227,7 @@ class Installer
         } else {
             throw new RuntimeException('Failed to unzip: ' . $filepath);
         }
-
+        
         return $dirname;
     }
 
@@ -247,17 +247,17 @@ class Installer
             foreach ($src as $key => $source) {
                 $this->recursiveCopy($source, $dst[$key]);
             }
-
+            
             return;
         }
 
         @mkdir($dst, 0755);
-
+        
         $iterator = new \RecursiveIteratorIterator(
             new \RecursiveDirectoryIterator($src, \RecursiveDirectoryIterator::SKIP_DOTS),
             \RecursiveIteratorIterator::SELF_FIRST
         );
-
+        
         foreach ($iterator as $file) {
             if ($file->isDir()) {
                 @mkdir($dst . '/' . $iterator->getSubPathName());
@@ -281,7 +281,7 @@ class Installer
             new \RecursiveDirectoryIterator($dir, \RecursiveDirectoryIterator::SKIP_DOTS),
             \RecursiveIteratorIterator::CHILD_FIRST
         );
-
+        
         foreach ($iterator as $file) {
             if ($file->isDir()) {
                 rmdir($file);
@@ -289,7 +289,7 @@ class Installer
                 unlink($file);
             }
         }
-
+        
         rmdir($dir);
     }
 }
