@@ -1,9 +1,14 @@
 {
+	"name": "cocoytech/ci3-ultimate",
 	"description" : "The CodeIgniter Application with Composer",
 	"scripts": {
-		"check-tests": [
-			"vendor/bin/phpunit --dump-xdebug-filter bin/xdebug-filter.php --prepend bin/xdebug-filter.php -vvv --testdox --colors=always",
-			"vendor/bin/phpunit --prepend bin/xdebug-filter.php -vvv --testdox --colors=always"
+		"check-xdebug": [
+			"phpunit --dump-xdebug-filter ../../bin/build/xdebug-filter.php",
+			"phpunit --prepend bin/build/xdebug-filter.php -vvv --testdox --colors=always"
+		],
+		"check-phpdbg": [
+
+			"phpdbg ./vendor/bin/phphunit --testdox --colors=always"
 		]
 	  },
 	  "scripts-descriptions": {
