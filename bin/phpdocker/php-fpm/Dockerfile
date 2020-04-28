@@ -1,5 +1,4 @@
 FROM phpdockerio/php73-fpm:latest
-WORKDIR "/app"
 
 # Fix debconf warnings upon build
 ARG DEBIAN_FRONTEND=noninteractive
