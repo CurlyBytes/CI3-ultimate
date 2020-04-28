@@ -118,7 +118,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = '../../application';
+	$application_folder = '../../app';
 
 /*
  *---------------------------------------------------------------
@@ -323,7 +323,7 @@ switch (ENVIRONMENT)
 		// Assume Composer with a vendor directory parallel to the application directory
 		define('CI_PHPUNIT_TESTPATH', implode(
 			DIRECTORY_SEPARATOR,
-			[dirname(APPPATH), 'vendor', 'kenjis', 'ci-phpunit-test', 'application', 'tests', '_ci_phpunit_test']
+			[dirname(APPPATH), 'vendor', 'kenjis', 'ci-phpunit-test', 'app', 'tests', '_ci_phpunit_test']
 		).DIRECTORY_SEPARATOR);
 	}
 

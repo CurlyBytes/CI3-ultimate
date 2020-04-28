@@ -1,7 +1,7 @@
 <phpunit
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="phpunit.xsd"
-	bootstrap="./application/tests/Bootstrap.php"
+	bootstrap="./app/tests/Bootstrap.php"
 	cacheTokens ="true"
 	convertDeprecationsToExceptions="true"
 	convertErrorsToExceptions="true"
@@ -13,7 +13,7 @@
 	colors="true">
 	<testsuites>
 		<testsuite name="CodeIgniter Application Test Suite">
-			<directory suffix="test.php">./application/tests/</directory>
+			<directory suffix="test.php">./app/tests/</directory>
 			<exclude>./_ci_phpunit_test/</exclude>
 		</testsuite>
 	</testsuites>
