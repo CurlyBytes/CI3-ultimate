@@ -1,0 +1,160 @@
+https://www.sitepoint.com/multi-language-support-in-codeigniter/
+https://www.beingidea.com/multi-language-switcher-in-codeigniter/
+https://www.formget.com/codeigniter-language/
+https://arjunphp.com/multilingual-codeigniter-i18n/
+https://stackoverflow.com/questions/43088433/multi-language-using-codeigniter
+https://www.roytuts.com/using-template-in-codeigniter/
+https://www.roytuts.com/display-site-maintenence-message-using-codeigniter/
+https://www.roytuts.com/prevent-sql-injection-in-codeigniter/
+https://www.roytuts.com/server-sent-events-with-codeigniter-push-notifications/
+https://selvakumar25.wordpress.com/2016/06/13/multi-language-support-in-codeigniter/
+https://www.cloudways.com/blog/multi-language-codeigniter/
+http://learningprogramming.net/php-mysql/codeigniter/multi-language-in-codeigniter-framework/
+https://techarise.com/multi-language-implementation-codeigniter/
+https://www.codexworld.com/multi-language-implementation-in-codeigniter/
+https://www.roytuts.com/codeigniter-multi-language-website/
+https://codeigniter.com/userguide3/libraries/config.html?highlight=config
+https://codeigniter.com/userguide3/libraries/language.html
+https://codeigniter.com/userguide3/general/index.html
+https://codeigniter.com/userguide3/general/errors.html
+https://codeigniter.com/userguide3/general/ancillary_classes.html
+https://codeigniter.com/userguide3/general/creating_libraries.html
+https://github.com/bcit-ci/CodeIgniter/wiki/i18n-Multi-language-Library-Helper
+https://jeromejaglale.com/doc/php/codeigniter_i18n
+https://jeromejaglale.com/doc/php/codeigniter_template
+https://jeromejaglale.com/doc/php/codeigniter_404
+https://jeromejaglale.com/doc/php/codeigniter_models
+https://github.com/bcit-ci/CodeIgniter/wiki/Compress-HTML-output
+https://github.com/terrylinooo/codeigniter-minifier/tree/master/application
+https://github.com/terrylinooo/codeigniter-minifier/issues
+https://github.com/slav123/CodeIgniter-minify/issues
+https://github.com/slav123/CodeIgniter-minify/issues/56
+
+http://www.highermedia.com/articles/nuts_bolts/codeigniter_base_classes_revisited
+https://markladoux.wordpress.com/2012/07/07/new-and-improved-codeigniter-setting-class/
+start
+check controller
+https://github.com/kenjis/codeigniter3-filename-checker
+https://github.com/sjlu/CodeIgniter-Bootstrap
+https://www.roytuts.com/server-sent-events-with-codeigniter-push-notifications/
+
+
+to be continue
+https://github.com/kenjis/codeigniter-cli
+https://github.com/kenjis/codeigniter-widgets
+https://github.com/kenjis/codeigniter3-namespaced-controller
+https://github.com/sjlu/CodeIgniter-Bootstrap/wiki
+https://github.com/nobuti/Codeigniter-breadcrumbs
+https://github.com/xdn27/codeigniter-alert
+https://github.com/JCSama/CodeIgniter-develbar
+https://rougin.github.io/combustor/
+https://github.com/jenssegers/codeigniter-template-library
+
+
+To be hmvc
+https://github.com/salimmansoori1994/full_ci_set
+https://forum.codeigniter.com/thread-63078-page-2.html
+https://github.com/binhnlt/codeigniter-service-layer
+https://github.com/alzen8work/CodeIgniter-HMVC/tree/master/application
+https://github.com/N3Cr0N/CodeIgniter-HMVC
+https://www.roytuts.com/setup-hmvc-with-codeigniter-3/
+
+
+To be refactor via composer custom
+https://github.com/maltyxx/debugbar
+https://github.com/kenjis/codeigniter-debugbar
+https://github.com/Tan5en5/codeigniter-debugbar
+https://github.com/JCSama/CodeIgniter-develbar
+
+CI aapp insightsa
+https://github.com/microsoft/ApplicationInsights-PHP
+https://packagist.org/packages/app-insights-php/client
+https://github.com/Seldaek/monolog/blob/master/doc/02-handlers-formatters-processors.md
+https://github.com/app-insights-php/monolog-handler
+https://github.com/JoshHighland/codeigniter-monolog-plus
+https://github.com/Seldaek/monolog/wiki/Third-Party-Packages
+https://github.com/jkachel/codeigniter-monolog-plus
+https://github.com/Seldaek/monolog/blob/master/src/Monolog/Handler/ChromePHPHandler.php
+https://github.com/cmdisp/monolog-microsoft-teams
+
+CI BDD 
+https://github.com/mistymagich/ci-phpunit-behat
+
+CI testing
+https://laravel-news.com/tips-to-speed-up-phpunit-tests
+https://medium.com/@nicocabot/speed-up-phpunit-code-coverage-analysis-4e35345b3dad
+https://timacdonald.me/tips-speed-up-your-phpunit-tests/
+https://mamchenkov.net/wordpress/2019/02/15/tips-to-speed-up-your-phpunit-tests/
+https://stackoverflow.com/questions/6167382/phpunit-testing-is-painfully-slow
+https://phpunit.de/getting-started/phpunit-7.html
+
+CI ddd
+CI security
+https://markladoux.wordpress.com/2018/05/14/simple-trick-to-prevent-access-via-direct-call-to-index-php/
+https://markladoux.wordpress.com/2012/07/18/makismet-3-0/
+
+CI watcher
+https://www.sitepoint.com/write-javascript-style-test-watchers-php/
+https://packagist.org/packages/jasonlewis/resource-watcher
+https://github.com/spatie/phpunit-watcher
+https://stackoverflow.com/questions/19226524/run-phpunit-tests-on-change
+https://packagist.org/packages/yosymfony/resource-watcher
+https://freek.dev/812-a-tool-to-automatically-rerun-phpunit-tests-when-source-code-changes
+https://github.com/mistymagich/ci-phpunit-behat
+https://github.com/seregazhuk/php-watcher
+https://packagist.org/packages/takielias/codeigniter-websocket
+
+CI base classes
+http://www.highermedia.com/articles/nuts_bolts/codeigniter_base_classes_revisited
+https://markladoux.wordpress.com/2012/12/19/codeigniter-autoload-hook-by-shane-pearson-modified/
+
+ddd setup
+https://en.programqa.com/question/40452245/
+https://code.tutsplus.com/articles/domain-driven-design--net-25773
+https://laracasts.com/discuss/channels/general-discussion/migrating-existing-codeigniter-application-to-laravel?page=0
+https://medium.com/better-programming/state-strategy-design-patterns-by-example-f57ebd7b6211
+swtich case with if else 1) deve is chrome and php fiel 2) prod  is azure insights and teams
+seo in codeigniter
+if ($this->agent->is_robot()) 
+{   echo '<link rel="canonical" href="' . site_url( $this->uri->uri_string() ) .'" />'; } else 
+{   echo '<meta name="canonical" content="'. base_url().implode('/', $this->uri->rsegment_array()) . '" />'; }
+
+echo '<link rel="canonical" href="' . site_url( $this->uri->uri_string() ) . '" />';
+
+<script type="text/javascript"> 
+try { 
+    var pageTracker = _gat._getTracker("UA-XXXXXXX-YY"); 
+    pageTracker._trackPageview("<?=base_url().implode('/', $this->uri->rsegment_array();?>"));
+} 
+catch(err){
+
+} 
+</script>
+====================
+
+push notificatin
+https://phil.tech/codeigniter/2009/11/21/send-iphone-notifications-from-codeigniter/
+
+
+html base tag <base href="<?=base_url();?>"> or <base href="http://example.com/en/" /> https://webdesign.tutsplus.com/articles/quick-tip-set-relative-urls-with-the-base-tag--cms-21399
+
+extend multiple core files like MY_Controller extend CI_Controller and PUBlic_controller extend MY_Controller https://phil.tech/codeigniter/2010/02/08/codeigniter-base-classes-keeping-it-dry/
+
+
+-----------
+html helper functions in ci
+Store your DOCTYPE in a config variable and update your entire site from XHTML 1.1 to HTML 5 easily
+Developing your app with <h1>Something</h1> then realizing your headers in 500 different view files need <h1><span>Something</span></h1>
+Fetching metadata from a database and outputting with meta()
+Adding Google event tracking to images loaded with img()
+Set your page titles (display headers, not title tag) to use a config variable 1 to 6 in case your CMS needs to change what level the links are.
+XSS protection for forms using form_open() and form_close(). Derek Allard hinted at this some time ago and I still hope to see it happen.
+
+----
+git submodules
+
+
+
+
+--- kkpi for devops
+
