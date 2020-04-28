@@ -1,6 +1,6 @@
 watch:
   directories:
-    - app
+    - application
   fileMask: '*.php'
 notifications:
   passingTests: true
@@ -9,3 +9,4 @@ phpunit:
   binaryPath: vendor/bin/phpunit
   arguments: '--stop-on-failure'
   timeout: 180
+hideManual: true

@@ -14,6 +14,10 @@
 
 			"pecl install pcov",
 			"php -d pcov.enabled=1 vendor/bin/phpunit — coverage-html=var/coverage-report"
+		],
+		"check-watch": [
+
+			"phpunit-watcher watch"
 		]
 	  },
 	  "scripts-descriptions": {
