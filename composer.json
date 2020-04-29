@@ -8,7 +8,7 @@
 		],
 		"check-phpdbg": [
 
-			"phpdbg -qr vendor/bin/phpunit --coverage-html bin/build/coverage-reports"
+			"phpdbg -q vendor/bin/phpunit --coverage-html bin/build/coverage-reports"
 		],
 		"check-pcov": [
 

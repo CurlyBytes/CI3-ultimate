@@ -4,49 +4,58 @@
 version: "3.7"
 services:
 
+    memcached:
+      image: memcached:alpine
+      container_name: ci3-ultimate-template-memcached
+
     redis:
       image: redis:alpine
-      container_name: ci3-ultimate-redis
+      container_name: ci3-ultimate-template-redis
 
     mysql:
       image: mysql:8.0
-      container_name: ci3-ultimate-mysql
+      container_name: ci3-ultimate-template-mysql
+      working_dir: /application
       volumes:
-        - .:/app
+        - .:/application
       environment:
         - MYSQL_ROOT_PASSWORD=rootuser
         - MYSQL_DATABASE=dbname
         - MYSQL_USER=dbuser
         - MYSQL_PASSWORD=dbpassword
       ports:
-        - "7375:3306"
+        - "7577:3306"
 
     webserver:
       image: nginx:alpine
-      container_name: ci3-ultimate-webserver
+      container_name: ci3-ultimate-template-webserver
+      working_dir: /application
       volumes:
-          - .:/app
+          - .:/application
           - ./bin/phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       ports:
-       - "7373:80"
+       - "7575:80"
 
     php-fpm:
       build: bin/phpdocker/php-fpm
-      container_name: ci3-ultimate-php-fpm
+      container_name: ci3-ultimate-template-php-fpm
+      working_dir: /application
       volumes:
-        - .:/app
+        - .:/application
         - ./bin/phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
 
     composer:
       image: composer:1.10.5
       command: ["composer", "install"]
+      working_dir: /application
       volumes:
-        - .:/app
+        - .:/application
       depends_on:
         - php-fpm
-
+  
     phpmyadmin:
       image: phpmyadmin/phpmyadmin:latest
+      working_dir: /application
       ports:
         - 7374:80
       environment:
