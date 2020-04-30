@@ -113,8 +113,8 @@ switch (ENVIRONMENT)
  * https://codeigniter.com/user_guide/general/managing_apps.html
  *
  * NO TRAILING SLASH!
- */
-	$application_folder = '../application';
+ */ 
+	$application_folder = '../app';
 
 /*
  *---------------------------------------------------------------
