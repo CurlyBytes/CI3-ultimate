@@ -59,3 +59,5 @@ $route['^(en|fil)/(.+)$'] = "$2";
 
 // '/en', '/fil', '/fr'  URIs -> use default controller
 $route['^(en|fil)$'] = $route['default_controller'];
+
+if (ENVIRONMENT === 'development')   $route['logs'] = "logViewer/index";

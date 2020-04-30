@@ -524,3 +524,8 @@ $config['proxy_ips'] = '';
 
 // language available
 $config['language_available'] = array('english' => 'en','tagalog' => 'fil');
+
+
+//logviewer
+$config["clv_log_folder_path"] = APPPATH . "logs";
+$config["clv_log_file_pattern"] = "log-*.php";

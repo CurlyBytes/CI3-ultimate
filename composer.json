@@ -29,7 +29,8 @@
 		
 		
 		"hirak/prestissimo": "0.3.10",
-		"nltbinh/codeigniter-service-layer": "^1.0"
+		"nltbinh/codeigniter-service-layer": "^1.0",
+		"seunmatt/codeigniter-log-viewer": "^1.1"
 	},
 	"require-dev": {
 		"mikey179/vfsstream": "1.1.*",
