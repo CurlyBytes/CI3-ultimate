@@ -19,12 +19,12 @@
 	</testsuites>
 	<filter>
 		<whitelist>
-			<directory suffix=".php">application/controllers</directory>
-			<directory suffix=".php">application/models</directory>
-			<directory suffix=".php">application/views</directory>
-			<directory suffix=".php">application/libraries</directory>
-			<directory suffix=".php">application/helpers</directory>
-			<directory suffix=".php">application/hooks</directory>
+			<directory suffix=".php">app/controllers</directory>
+			<directory suffix=".php">app/models</directory>
+			<directory suffix=".php">app/views</directory>
+			<directory suffix=".php">app/libraries</directory>
+			<directory suffix=".php">app/helpers</directory>
+			<directory suffix=".php">app/hooks</directory>
 		</whitelist>
 	</filter>
 	<logging>
