@@ -2,9 +2,7 @@
 	"name": "cocoytech/ci3-ultimate",
 	"description" : "The CodeIgniter Application with Composer",
 	"scripts": {
-		"post-update-cmd": [
-			"CIDebugScript::postInstall"
-		],
+
 		"check-xdebug": [
 			"phpunit --dump-xdebug-filter ../../bin/build/xdebug-filter.php",
 			"phpunit --prepend bin/build/xdebug-filter.php -vvv --testdox --colors=always"
@@ -27,7 +25,10 @@
 		"php": ">=5.3.2",
 		"codeigniter/framework": "3.1.11",
 		"hirak/prestissimo": "0.3.10",
-		"nltbinh/codeigniter-service-layer": "^1.0"
+		"nltbinh/codeigniter-service-layer": "^1.0",
+		"monolog/monolog": "^1.0",
+		"app-insights-php/monolog-handler": "^0.2.1",
+		"jkachel/codeigniter-monolog-plus": "^2.0"
 	},
 	"require-dev": {
 		"compwright/codeigniter-installers": "*",
