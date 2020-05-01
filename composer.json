@@ -2,6 +2,9 @@
 	"name": "cocoytech/ci3-ultimate",
 	"description" : "The CodeIgniter Application with Composer",
 	"scripts": {
+		"post-update-cmd": [
+			"CIDebugScript::postInstall"
+		],
 		"check-xdebug": [
 			"phpunit --dump-xdebug-filter ../../bin/build/xdebug-filter.php",
 			"phpunit --prepend bin/build/xdebug-filter.php -vvv --testdox --colors=always"

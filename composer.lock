@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "460800b2240bf74225a9b2c63b2e34cc",
+    "content-hash": "7db782e60e25a60c27428b5aa4097ee0",
     "packages": [
         {
             "name": "codeigniter/framework",
@@ -2646,6 +2646,50 @@
             "time": "2020-04-17T01:09:41+00:00"
         },
         {
+            "name": "suphm/ci-debug",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/suphm/ci-debug.git",
+                "reference": "1f0da223a70cb321d9a9c27b8604a75be565a53f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/suphm%2Fci-debug/repository/archive.zip?sha=1f0da223a70cb321d9a9c27b8604a75be565a53f",
+                "reference": "1f0da223a70cb321d9a9c27b8604a75be565a53f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "files": [
+                    "helpers/debug_helper.php",
+                    "script.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yusup Hambali",
+                    "email": "supalpuket@gmail.com"
+                }
+            ],
+            "description": "CodeIgniter Debugger Tool",
+            "homepage": "https://gitlab.com/suphm/ci-debug",
+            "keywords": [
+                "codeigniter",
+                "debugger",
+                "profiler",
+                "toolbar"
+            ],
+            "time": "2018-08-16T13:13:35+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v5.0.8",
             "source": {
@@ -3320,7 +3364,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "roave/security-advisories": 20
+        "roave/security-advisories": 20,
+        "suphm/ci-debug": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
