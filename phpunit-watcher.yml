@@ -9,4 +9,4 @@ phpunit:
   binaryPath: vendor/bin/phpunit
   arguments: '--stop-on-failure'
   timeout: 180
-hideManual: true
+hideManual: false
