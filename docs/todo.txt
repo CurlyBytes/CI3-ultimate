@@ -76,6 +76,7 @@ https://github.com/kenjis/codeigniter-debugbar
 https://github.com/Tan5en5/codeigniter-debugbar
 https://github.com/JCSama/CodeIgniter-develbar
 
+
 CI aapp insightsa
 https://github.com/microsoft/ApplicationInsights-PHP
 https://packagist.org/packages/app-insights-php/client
@@ -168,3 +169,13 @@ git submodules
 
 --- kkpi for devops
 
+
+https://analytics.dev.azure.com/rafi-secdevops/_odata/v3.0-preview/$metadata
+
+https://analytics.dev.azure.com/rafi-secdevops/_odata/v3.0-preview/BuildPipelines/$count
+
+https://docs.microsoft.com/en-us/azure/devops/report/powerbi/sample-pipelines-task-duration-trend?view=azure-devops&tabs=powerbi
+https://github.com/webdevops/azure-devops-exporter
+https://docs.microsoft.com/en-us/azure/devops/report/powerbi/sample-pipelines-allpipelines?view=azure-devops&tabs=powerbi
+https://sqlitybi.com/connecting-power-bi-to-azure-devops-using-odata-feed/?doing_wp_cron=1588347527.8269250392913818359375
+https://www.azuredevopsguide.com/using-powerbis-inbuilt-azure-devops-connector-to-get-data/ 

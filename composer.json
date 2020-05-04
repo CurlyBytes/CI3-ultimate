@@ -26,9 +26,13 @@
 		"codeigniter/framework": "3.1.11",
 		"hirak/prestissimo": "0.3.10",
 		"nltbinh/codeigniter-service-layer": "^1.0",
+		"microsoft/windowsazure": "^0.5.7",
+		"php-console/php-console": "^3.1",
 		"monolog/monolog": "^1.0",
-		"app-insights-php/monolog-handler": "^0.2.1",
-		"jkachel/codeigniter-monolog-plus": "^2.0"
+		"cmdisp/monolog-microsoft-teams": "^1.1",
+		"swiftmailer/swiftmailer": "^6.2",
+		"jk/monolog-request-header-processor": "^1.0",
+		"bramus/monolog-colored-line-formatter": "~2.0"
 	},
 	"require-dev": {
 		"compwright/codeigniter-installers": "*",
@@ -40,7 +44,7 @@
 		"phpunit/phpunit": "7.5.20",
 		"spatie/phpunit-watcher": "^1.22",
 		"seunmatt/codeigniter-log-viewer": "^1.1",
-		"vlucas/phpdotenv": "^4.1"
+		"vlucas/phpdotenv": "^3.1"
 	},
 	"extra": {
 		"codeigniter-application-dir": "app/",

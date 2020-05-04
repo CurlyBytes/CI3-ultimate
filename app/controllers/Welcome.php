@@ -20,6 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{ 
+		// try {
+		// 	throw new Exception('Custom error message');
+		// }catch (Exception $e) {
+		// 	log_message("error", $e->getMessage());
+		// 	return show_error($e->getMessage());
+		// }
 		$this->load->view('welcome_message');
 	}
 }
