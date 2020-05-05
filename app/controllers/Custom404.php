@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CT_Controller {
+class Custom404 extends CT_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,15 +17,13 @@ class Welcome extends CT_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * 
 	 */
 	public function index()
 	{ 
-		// try {
-		// 	throw new Exception('Custom error message');
-		// }catch (Exception $e) {
-		// 	log_message("error", $e->getMessage());
-		// 	return show_error($e->getMessage());
-		// }
-		$this->load->view('welcome_message');
+		$this->load->helper('url');
+        $this->output->set_status_header('404');
+        $data['content'] = 'custom404view'; // View name
+        $this->load->view('template/404/custom404view', $data);	
 	}
 }

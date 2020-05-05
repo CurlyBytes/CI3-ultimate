@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class LogViewer extends CI_Controller {
+class LogViewer extends CT_Controller {
 
 	private $logViewer;
 
