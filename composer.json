@@ -32,7 +32,8 @@
 		"cmdisp/monolog-microsoft-teams": "^1.1",
 		"swiftmailer/swiftmailer": "^6.2",
 		"jk/monolog-request-header-processor": "^1.0",
-		"bramus/monolog-colored-line-formatter": "~2.0"
+		"bramus/monolog-colored-line-formatter": "~2.0",
+		"egeniq/monolog-gdpr": "^1.0"
 	},
 	"require-dev": {
 		"compwright/codeigniter-installers": "*",

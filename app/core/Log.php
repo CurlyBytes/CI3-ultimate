@@ -82,10 +82,19 @@ class CI_Log
 			$this->log->pushProcessor(new \JK\Monolog\Processor\RequestHeaderProcessor());
 			$this->log->pushProcessor(new Monolog\Processor\WebProcessor());
 			$this->log->pushProcessor(new Monolog\Processor\TagProcessor());
+		
 			$this->log->pushProcessor(function ($entry) {
 				$entry['extra']['data'] = 'Hello world!';
 				return $entry;
 			});
+
+		
+			//todo https://github.com/egeniq/monolog-gdpr to work the both
+			$processor = new Egeniq\Monolog\Gdpr\Processor\RedactEmailProcessor();
+			$processor = new Egeniq\Monolog\Gdpr\Processor\RedactIpProcessor();
+			// optionally you may configure a salt:
+			$processor->setSalt('h@tsefl@ts!');
+			$this->log->pushProcessor($processor);
 		}
 
 		// decide which handler(s) to use

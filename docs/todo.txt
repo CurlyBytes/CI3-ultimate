@@ -160,12 +160,80 @@ Fetching metadata from a database and outputting with meta()
 Adding Google event tracking to images loaded with img()
 Set your page titles (display headers, not title tag) to use a config variable 1 to 6 in case your CMS needs to change what level the links are.
 XSS protection for forms using form_open() and form_close(). Derek Allard hinted at this some time ago and I still hope to see it happen.
+try {
+    $this->httpClient->request('GET', '/products');
+} catch (ConnectException $ex) {
+    throw ApiNotAvailableException::forError($ex);
+}
 
+https://www.nikolaposa.in.rs/assets/uploads/slides/dealing-with-exceptional-conditions/phpce17/#/37
+
+class ErrorHandler implements MiddlewareInterface
+{
+    public function __invoke(RequestInterface $request, ResponseInterface $response, callable $next)
+    {
+        try {
+            $response = $next($request, $response);
+        } catch (\Throwable $e) {
+            $response = $this->handleError($e, $request);
+        }
+
+        return $response;
+    }
+}
+
+final class ErrorHandlerFactory
+{
+    public function __invoke(ContainerInterface $container)
+    {
+        $whoops = new \Whoops\Run();
+
+        if (\Whoops\Util\Misc::isAjaxRequest()) {
+            $whoops->pushHandler(new JsonResponseHandler());
+        } elseif (\Whoops\Util\Misc::isCommandLine()) {
+            $whoops->pushHandler(new CommandLineHandler());
+        } else {
+            $whoops->pushHandler(new PrettyPageHandler());
+        }
+
+        $whoops->pushHandler(new SetHttpStatusCodeHandler());
+        $whoops->pushHandler(new LogHandler($container->get('DefaultLogger'));
+
+        return $whoops;
+    }
+}
+
+final class ErrorHandlerFactory
+{
+    public function __invoke(ContainerInterface $container)
+    {
+        $whoops = new \Whoops\Run();
+
+        if (\Whoops\Util\Misc::isAjaxRequest()) {
+            $whoops->pushHandler(new JsonResponseHandler());
+        } elseif (\Whoops\Util\Misc::isCommandLine()) {
+            $whoops->pushHandler(new CommandLineHandler());
+        } else {
+            $whoops->pushHandler(new PrettyPageHandler());
+        }
+
+        $whoops->pushHandler(new SetHttpStatusCodeHandler());
+        $whoops->pushHandler(new LogHandler($container->get('DefaultLogger'));
+
+        return $whoops;
+    }
+}
 ----
 git submodules
 
 
-
+https://arjunphp.com/codeigniter-send-and-retrieve-data-using-flash-messages/
+https://arjunphp.com/twitter-bootstrap-style-breadcrumb-in-codeigniter/
+https://arjunphp.com/generating-alphanumeric-unique-id-in-codeigniter/
+https://arjunphp.com/how-to-enable-csrf-cross-site-request-forgery-codeigniter/
+https://arjunphp.com/ajax-csrf-protection-in-codeigniter/
+https://jerel.co/blog/2012/03/a-simple-solution-to-codeigniter-csrf-protection-and-ajax
+https://arjunphp.com/how-to-use-twilio-to-send-sms-with-codeigniter/
 
 --- kkpi for devops
 

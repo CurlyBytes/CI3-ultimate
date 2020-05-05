@@ -4,7 +4,8 @@ class WhoopsHook
     public function bootWhoops()
     {
         $whoops = new \Whoops\Run;
-        $whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
+
+
         if (\Whoops\Util\Misc::isAjaxRequest()) {
             $jsonHandler = new Whoops\Handler\JsonResponseHandler();
         
@@ -18,7 +19,12 @@ class WhoopsHook
         
             // And push it into the stack:
             $whoops->pushHandler($jsonHandler);
+        } elseif (\Whoops\Util\Misc::isCommandLine()) {
+            $whoops->pushHandler(new Whoops\Handler\CommandLineHandler());
+        } else {
+            $whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
         }
+
         $whoops->register();
 
 
