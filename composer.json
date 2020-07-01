@@ -87,7 +87,7 @@
     "squizlabs/php_codesniffer": "3.5.5"
   },
   "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "0.7.0",
     "dereuromark/composer-prefer-lowest": "0.1.6",
     "kenjis/ci-phpunit-test": "0.17.3",
     "nerones/codeigniter-phpcs": "dev-master",
