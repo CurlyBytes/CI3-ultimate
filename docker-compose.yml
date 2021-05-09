@@ -49,7 +49,7 @@ services:
       - redis
 
   composer:
-    image: composer:1.9
+    image: composer:1.10
     command: ["composer", "install"]
     volumes:
       - .:/app
