@@ -88,7 +88,7 @@
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
-    "dereuromark/composer-prefer-lowest": "0.1.6",
+    "dereuromark/composer-prefer-lowest": "0.1.10",
     "kenjis/ci-phpunit-test": "0.17.3",
     "nerones/codeigniter-phpcs": "dev-master",
     "phpmd/phpmd": "2.8.2",
