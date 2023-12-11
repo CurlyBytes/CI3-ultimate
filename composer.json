@@ -91,7 +91,7 @@
     "dereuromark/composer-prefer-lowest": "0.1.6",
     "kenjis/ci-phpunit-test": "0.17.3",
     "nerones/codeigniter-phpcs": "dev-master",
-    "phpmd/phpmd": "2.8.2",
+    "phpmd/phpmd": "2.15.0",
     "roave/security-advisories": "dev-master"
   },
   "autoload": {
